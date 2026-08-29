@@ -1,12 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Password Generator</title>
+    <title>Password Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <h1 class="title">🔐 Generate Password</h1>
+                <p class="subtitle">Create strong, secure passwords with custom parameters</p>
+            </div>
+
+            <form class="form-section" id="passwordForm">
+                <!-- Password Length -->
+                <div class="input-group">
+                    <label class="label">Password Length</label>
+                    <div class="length-input-wrapper">
+                        <input type="range" id="passLength" min="4" max="50" value="12" class="slider">
+                        <input type="number" id="passLengthNumber" min="4" max="50" value="12" class="length-number">
+                    </div>
+                    <div class="length-display">
+                        <span id="lengthValue">12</span> characters
+                    </div>
+                </div>
+
+                <!-- Character Options -->
+                <div class="input-group">
+                    <label class="label">Character Types</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="includeLowercase" checked class="checkbox">
+                            <span class="checkmark"></span>
+                            Lowercase (a-z)
+                        </label>
+
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="includeUppercase" checked class="checkbox">
+                            <span class="checkmark"></span>
+                            Uppercase (A-Z)
+                        </label>
+
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="includeNumbers" checked class="checkbox">
+                            <span class="checkmark"></span>
+                            Numbers (0-9)
+                        </label>
+
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="includeSymbols" checked class="checkbox">
+                            <span class="checkmark"></span>
+                            Symbols (!@#$%...)
+                        </label>
+                    </div>
+                </div>
+            </form>
+
+            <button id="generateBtn" class="generate-btn">Generate Password</button>
+
+            <!-- Result Section -->
+            <div class="result-section" id="resultSection" style="display: none;">
+                <div class="result-container">
+                    <div class="password-display">
+                        <input type="text" id="passwordResult" readonly class="password-input">
+                        <button id="copyBtn" class="copy-btn" type="button">Copy</button>
+                    </div>
+                </div>
+                <div class="feedback" id="feedback"></div>
+            </div>
+
+            <!-- Strength Indicator -->
+            <div class="strength-meter" id="strengthMeter" style="display: none;">
+                <span class="strength-label">Password Strength</span>
+                <div class="strength-bar">
+                    <div class="strength-fill" id="strengthFill"></div>
+                </div>
+                <div class="strength-text" id="strengthText"></div>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
