@@ -1,61 +1,48 @@
 :root {
-    /* Background Colors - Sophisticated palette */
     --bg-primary: #11151c;
     --bg-secondary: #171c24;
     --bg-tertiary: #1c222c;
     --bg-quaternary: #222936;
     --bg-accent: linear-gradient(135deg, #171c24 0%, #1c222c 100%);
     
-    /* Text Colors - Premium contrast */
     --text-primary: #f2f0ea;
     --text-secondary: #a9afba;
     --text-tertiary: #7d8490;
     --text-muted: #626a76;
     
-    /* Accent Colors - Modern & Vibrant */
     --accent-primary: #8b7a5a;
     --accent-secondary: #b09a70;
     --accent-light: #c7b58d;
     --accent-lighter: #d7c9aa;
     --accent-dark: #6f6046;
     
-    /* Gradient Accents */
     --gradient-primary: linear-gradient(135deg, #8b7a5a 0%, #b09a70 100%);
     --gradient-secondary: linear-gradient(135deg, #665b72 0%, #8a7899 100%);
     --gradient-success: linear-gradient(135deg, #71806d 0%, #8b9b83 100%);
     --gradient-warning: linear-gradient(135deg, #a47b4f 0%, #bd9464 100%);
     
-    /* Functional Colors */
     --success: #71806d;
     --warning: #a47b4f;
     --error: #a95f5f;
     
-    /* Borders & Dividers */
     --border-color: #343b47;
     --border-light: #292f39;
     --border-lightest: #171c24;
     
-    /* Shadows - Premium elevation system */
     --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.22);
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.28);
     --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.34);
     --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.40);
     --shadow-xl: 0 20px 48px rgba(0, 0, 0, 0.48);
     
-    /* Sizing */
     --radius-sm: 8px;
     --radius-md: 12px;
     --radius-lg: 16px;
     --radius-xl: 20px;
     
-    /* Typography */
     --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
     --font-family-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Menlo, monospace;
 }
-
-/* ============================================
-   Global Styles
-   ============================================ */
 
 * {
     margin: 0;
@@ -80,7 +67,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Animated background gradient overlay */
+
 body::before {
     content: '';
     position: fixed;
@@ -189,7 +176,6 @@ body::before {
     line-height: 1.4;
 }
 
-/* Length Slider */
 .length-input-wrapper {
     display: flex;
     gap: 12px;
@@ -287,7 +273,6 @@ body::before {
     font-size: 13px;
 }
 
-/* Checkboxes */
 .checkbox-group {
     display: flex;
     flex-direction: column;
